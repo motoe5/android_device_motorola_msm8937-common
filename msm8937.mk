@@ -79,6 +79,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
+# DEXPREOPT SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8937 \
@@ -263,7 +266,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
-# Qualcomm broadcast whitelist
+# Qualcomm
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
