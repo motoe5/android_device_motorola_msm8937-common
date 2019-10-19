@@ -37,8 +37,8 @@ static inline const char* BtmGetDefaultName()
     if (strstr(product_device, "james"))
         return "Moto E5 Play";
 
-    // Fallback to ro.product.model
-    return product_device;
+    // Fallback to motorola
+    return "Motorola";
 }
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
