@@ -49,6 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1 \
     persist.ts.rtmakeup=true \
+    persist.camera.HAL3.enabled=1 \
     persist.vendor.camera.tof.direct=1 \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
