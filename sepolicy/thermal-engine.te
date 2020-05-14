@@ -1,1 +1,6 @@
+# Allow thermal-engine to read files in /sys
+r_dir_file(thermal-engine, sysfs)
+
 allow thermal-engine thermal_device:chr_file { ioctl };
+allow thermal-engine socket_device:sock_file { create };
+allow thermal-engine sysfs_vadc_dev:dir { search };

@@ -1,0 +1,2 @@
+allow healthd vendor_file:file { getattr };
+#allow healthd charge_only_exec:file { entrypoint };

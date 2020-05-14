@@ -9,3 +9,10 @@ allow vendor_init {
 
 allow vendor_init rootfs:lnk_file setattr;
 allow vendor_init persist_file:filesystem getattr;
+
+set_prop(vendor_init, vendor_fm_prop)
+
+allow vendor_init wifi_data_file:dir { search setattr };
+allow vendor_init dhcp_data_file:dir { setattr };
+allow vendor_init time_data_file:dir { create };
+allow vendor_init wpa_socket:dir { setattr };
