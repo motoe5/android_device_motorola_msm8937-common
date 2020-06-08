@@ -417,7 +417,7 @@ on property:vendor.hw.fm.init=*
 
 service port-bridge /vendor/bin/port-bridge
     class main
-    user radio system
+    user system
     group radio system inet
     disabled
     oneshot
