@@ -181,7 +181,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnCdmaDevice=1 \
     ro.build.vendorprefix=/vendor
 
-#,Sensors
+# SdcardFs
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
+
+# Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.sar_sensor=1 \
     ro.mot.sensors.glance_approach=false \
