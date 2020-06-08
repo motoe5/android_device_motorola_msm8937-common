@@ -1,1 +1,5 @@
 allow qti_init_shell kmsg_device:chr_file { open write };
+
+allow qti_init_shell sysfs_dm:file { write };
+
+allow qti_init_shell sysfs:file { write };
