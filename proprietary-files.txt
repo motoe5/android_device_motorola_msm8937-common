@@ -29,6 +29,10 @@ vendor/lib64/libacdbrtac.so|2e44a45a2f61c621d4c746acc83139718d18ceef
 vendor/lib64/libadiertac.so|71d606669c19e567283751ce0ecdf757792adab3
 vendor/lib64/libaudcal.so|fdb34621e3d4433bcdc047ad536f0dac3a85b0e7
 
+# AptX - from river 
+lib64/libaptX_encoder.so
+lib64/libaptXHD_encoder.so
+
 # Bluetooth - from deen_sprout - PPKS29.68-16-36-13
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063da7375148fdd56930a54ea8d3e276725e62df
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
@@ -479,9 +483,9 @@ vendor/lib64/libqmiservices.so|c4d5f3cec4ba4ea4d9944d8e6155a4d055ff595c
 -app/QtiTelephonyService/QtiTelephonyService.apk|fbe14d0a7c621e3721f27b58d91f917ed5834d87
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
--framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
--framework/QtiTelephonyServicelibrary.jar|94208d7e8e94db498112712c8d0eb551d23e6318
--framework/qcrilhook.jar|f4e4a04bb4bd2015d8426146e4f59b341a0c7b5a
+framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
+framework/QtiTelephonyServicelibrary.jar|94208d7e8e94db498112712c8d0eb551d23e6318
+framework/qcrilhook.jar|f4e4a04bb4bd2015d8426146e4f59b341a0c7b5a
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|a741ad9bd64a9d87048b43eaddef03d239b777a2
 vendor/bin/ATFWD-daemon|c2f6860baa674410badf1b88ccec8645ee5be41b
 vendor/bin/netmgrd|d0261b43d64a5a9f87552c01eb645002f21ccf03
@@ -587,9 +591,9 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|e87c7e158e0b12a2fe6abcc
 
 # Thermal - from deen_sprout - PPKS29.68-16-36-13
 vendor/bin/thermal-engine|676d4cdfb4c97f6ad1d9f22f79844ae80e834c2b
-vendor/lib/libthermalclient.so|b41ea4c90353b8e057f774979d8ce5d3a006f70c
+-vendor/lib/libthermalclient.so|b41ea4c90353b8e057f774979d8ce5d3a006f70c
 vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|d469d5f17b3ee397dd1c5c91d6a936db3e9b4bfd
-vendor/lib64/libthermalclient.so|e1123e8b39a39d4907092271922e47190e19d1c5
+-vendor/lib64/libthermalclient.so|e1123e8b39a39d4907092271922e47190e19d1c5
 vendor/lib64/libthermalioctl.so|1ce39d2a088f8e943be9a4c4b6d3c212a9881d95
 
 # Time services - from deen_sprout - PPKS29.68-16-36-13
