@@ -5,7 +5,6 @@
  *  for attribution purposes only.
  *
  * Copyright (C) 2012 The Android Open Source Project
- * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,49 +25,27 @@
 #include <cutils/properties.h>
 #include <string.h>
 
-#include "osi/include/osi.h"
-
-typedef struct {
-    const char *product_device;
-    const char *product_model;
-} device_t;
-
-static const device_t devices[] = {
-    {"hannah", "moto e5 plus"},
-    {"james", "moto e5 play"},
-};
-
-static inline const char *BtmGetDefaultName()
+static inline const char* BtmGetDefaultName()
 {
     char product_device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", product_device, "");
 
-    for (unsigned int i = 0; i < ARRAY_SIZE(devices); i++) {
-        device_t device = devices[i];
-
-        if (strcmp(device.product_device, product_device) == 0) {
-            return device.product_model;
-        }
-    }
+    if (strstr(product_device, "hannah"))
+        return "Moto E5 Plus";
+    if (strstr(product_device, "james"))
+        return "Moto E5 Play";
 
     // Fallback to ro.product.model
-    return "";
+    return product_device;
 }
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-#undef PROPERTY_VALUE_MAX
-// Disables read remote device feature
+
+#define BLE_VND_INCLUDED   TRUE
+#define BTIF_HF_WBS_PREFERRED TRUE
+#define BTM_WBS_INCLUDED TRUE
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    16
-#define BLE_VND_INCLUDED   TRUE
-#define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
-#define BTM_SCO_ENHANCED_SYNC_DISABLED TRUE
-// skips conn update at conn completion
-#define BT_CLEAN_TURN_ON_DISABLED 1
 
-/* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
-#define AVDT_NUM_SEPS 12
-
-/* Enable HFP WBS feature */
-#define BTIF_HF_CLIENT_WBS_INCLUDED TRUE
+#undef PROPERTY_VALUE_MAX
 #endif
