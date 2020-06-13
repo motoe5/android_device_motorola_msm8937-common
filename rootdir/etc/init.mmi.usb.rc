@@ -31,7 +31,7 @@ on init
 on boot
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
     write /sys/class/android_usb/android0/iProduct ${ro.product.model}
-	write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
     #create motorola usblan driver instance for factory
     mkdir /config/usb_gadget/g1/functions/usbnet.usb0
     mkdir /dev/bus 0755 root root
@@ -44,7 +44,7 @@ on boot
     write /sys/class/android_usb/android0/f_rndis_qc/max_pkt_per_xfer 1
     write /sys/module/g_android/parameters/mtp_rx_req_len 524288
     write /sys/module/g_android/parameters/mtp_tx_req_len 524288
-	write /sys/class/android_usb/f_mass_storage/lun/nofua 1
+    write /sys/class/android_usb/f_mass_storage/lun/nofua 1
 
     chown root system /sys/module/uvcvideo/parameters/quirks
     chmod 0660 /sys/module/uvcvideo/parameters/quirks
