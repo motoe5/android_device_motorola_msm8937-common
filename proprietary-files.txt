@@ -156,6 +156,9 @@ vendor/lib64/libets_fp_et5.so|536e9097b3f188b90c78882e8e72f3e2f8125666
 vendor/lib64/libets_teeclient.so|1021ffc65bd48e405a7c05c1cb3025317f5157c1
 vendor/lib64/vendor.egistec.hardware.fingerprint@2.0_vendor.so|70611a99139820e21ccdf218940eb68242cd482c
 
+# FM - from tissot - PKQ1.180917.001.V10.0.21.0.PDHMIXM
+vendor/bin/fm_qsoc_patches
+
 # Gatekeeper - from deen_sprout - PPKS29.68-16-36-13
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eeb4ba9eacb57c958051a47d307968254ee081d0
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
