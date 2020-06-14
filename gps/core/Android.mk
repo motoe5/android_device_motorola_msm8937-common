@@ -37,7 +37,7 @@ LOCAL_CFLAGS += \
 LOCAL_C_INCLUDES:= \
     $(LOCAL_PATH)/data-items \
     $(LOCAL_PATH)/data-items/common \
-    $(LOCAL_PATH)/observer \
+    $(LOCAL_PATH)/observer
 
 LOCAL_HEADER_LIBRARIES := \
     libutils_headers \
@@ -56,4 +56,5 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := \
     $(LOCAL_PATH)/data-items \
     $(LOCAL_PATH)/data-items/common \
     $(LOCAL_PATH)/observer
+
 include $(BUILD_HEADER_LIBRARY)
