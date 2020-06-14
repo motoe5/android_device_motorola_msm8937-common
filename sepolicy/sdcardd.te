@@ -1,0 +1,1 @@
+allow sdcardd sdcardd:file { getattr };
