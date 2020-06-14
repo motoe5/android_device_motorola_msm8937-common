@@ -11,6 +11,8 @@
 
 # Capsense
 /sys/class/capsense(/.*)?                                u:object_r:sysfs_capsense:s0
+/sys/class/input/input3/capsense_top(/.*)?               u:object_r:sysfs_capsense:s0
+/sys/class/input/input4/capsense_bottom(/.*)?            u:object_r:sysfs_capsense:s0
 /sys/class/input/input5/capsense_top(/.*)?               u:object_r:sysfs_capsense:s0
 /sys/class/input/input6/capsense_bottom(/.*)?            u:object_r:sysfs_capsense:s0
 /vendor/bin/capsense_reset               u:object_r:capsense_reset_exec:s0
