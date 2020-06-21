@@ -140,7 +140,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    rild.libargs=-d /dev/smd0 \
+    rild.libargs="-d /dev/smd1" \
     ril.subscription.types=NV,RUIM \
     DEVICE_PROVISIONED=1 \
     persist.vendor.radio.no_wait_for_card=1 \
